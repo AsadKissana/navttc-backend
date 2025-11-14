@@ -1,6 +1,7 @@
 import express from 'express'
 import productRouter from "./src/routes/productRoute.js";
 import userRouter from "./src/routes/userRoute.js";
+import authRouter from "./src/routes/authRoute.js";
 import { config } from 'dotenv';
 import db from './src/config/db.js';
 import cookieParser from 'cookie-parser'
@@ -42,6 +43,7 @@ app.get('/', (request, response) => {
   response.send(backendInfo);
 });
 
+app.use("/auth", authRouter);
 app.use("/products", productRouter);
 app.use("/users", userRouter);
 
