@@ -20,10 +20,27 @@ app.use(cookieParser())
 app.use(express.json());
 app.use(morgan('dev'));
 
-app.get('/',
-(request, response) => {
-  response.send("This is Hello World!")
-})
+app.get('/', (request, response) => {
+  const backendInfo = `
+    Backend Information:
+    - This is a simple Express.js backend for the NAVTTC course.
+    - It provides basic API functionalities for managing products and users.
+
+    Supported Features:
+    - Product Management: Retrieve a list of all products.
+    - User Management: Delete users from the system.
+
+    Available Endpoints:
+    - GET /products
+      - Description: Retrieves a complete list of all available products.
+      - Usage: curl http://localhost:3000/products
+
+    - DELETE /users/:id
+      - Description: Deletes a specific user based on their unique ID.
+      - Usage: curl -X DELETE http://localhost:3000/users/123
+  `;
+  response.send(backendInfo);
+});
 
 app.use("/products", productRouter);
 app.use("/users", userRouter);
