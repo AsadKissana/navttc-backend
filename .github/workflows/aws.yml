@@ -7,25 +7,25 @@ on:
 # Set environment variables for the job
 env:
   # Your ECR repository name
-  ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
+  ECR_REPOSITORY: navttc/backend
   
   # The name of the container in your Task Definition
   # (Find this in your task-definition.json file under "containerDefinitions" > "name")
-  CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}
+  CONTAINER_NAME: backend
   
   # The name of your ECS cluster
-  ECS_CLUSTER: ${{ secrets.ECS_CLUSTER }}
+  ECS_CLUSTER: snoopy-kangaroo-9ovrmi
   
   # The name of your ECS service
-  ECS_SERVICE: ${{ secrets.ECS_SERVICE }}
+  ECS_SERVICE: github-service-uxjgcbxa
   
   # --- CHANGED ---
   # This is no longer a filename. This is the "family" name
   # of your task definition in AWS (e.g., "my-app-task").
-  ECS_TASK_DEFINITION_FAMILY: ${{ secrets.ECS_TASK_DEFINITION_FAMILY }}
+  ECS_TASK_DEFINITION_FAMILY: github
   
   # The AWS region
-  AWS_REGION: ${{ secrets.AWS.AWS_REGION }}
+  AWS_REGION: ap-southeast-1
 
 jobs:
   deploy:
