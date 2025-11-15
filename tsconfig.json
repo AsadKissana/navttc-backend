@@ -32,6 +32,11 @@
     // "noFallthroughCasesInSwitch": true,
     // "noPropertyAccessFromIndexSignature": true,
 
+    // "moduleResolution": "nodenext",
+    // "emitDeclarationOnly": true,
+    // "noEmit": true,
+    // "allowImportingTsExtensions": true,
+
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",

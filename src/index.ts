@@ -1,9 +1,9 @@
 import express from 'express'
-import productRouter from "./routes/productRoute.ts";
-import userRouter from "./routes/userRoute.ts";
-import authRouter from "./routes/authRoute.ts";
+import productRouter from "./routes/productRoute.js";
+import userRouter from "./routes/userRoute.js";
+import authRouter from "./routes/authRoute.js";
 import { config } from 'dotenv';
-import db from './config/db.ts';
+import db from './config/db.js';
 import cookieParser from 'cookie-parser'
 import morgan from 'morgan';
 import cors from 'cors';
