@@ -25,7 +25,7 @@ env:
   ECS_TASK_DEFINITION_FAMILY: ${{ secrets.ECS_TASK_DEFINITION_FAMILY }}
   
   # The AWS region
-  AWS_REGION: ${{ AWS.AWS_REGION }}
+  AWS_REGION: ${{ secrets.AWS.AWS_REGION }}
 
 jobs:
   deploy:
