@@ -86,7 +86,7 @@ jobs:
           image: ${{ steps.build-image.outputs.image_uri }}
 
       - name: Deploy new task definition to Amazon ECS
-        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
           task-definition: ${{ steps.render-new-task-definition.outputs.task-definition }} # The file from the previous step
           service: ${{ env.ECS_SERVICE }}
