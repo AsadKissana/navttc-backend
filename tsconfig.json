@@ -8,8 +8,10 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
-    "target": "esnext",
+    "target": "es2020",
     "types": [],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -32,7 +34,7 @@
     // "noFallthroughCasesInSwitch": true,
     // "noPropertyAccessFromIndexSignature": true,
 
-    // "moduleResolution": "nodenext",
+    "moduleResolution": "nodenext",
     // "emitDeclarationOnly": true,
     // "noEmit": true,
     // "allowImportingTsExtensions": true,

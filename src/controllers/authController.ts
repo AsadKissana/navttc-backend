@@ -18,7 +18,7 @@ export const session = (req:Request,res:Response)=>{
 export const signin = (req:Request,res:Response)=>{
   try{
     const {username,password} = req.body;
-  if(req.body.username !== "ADMIN"){
+  if(req.body.email !== "ADMIN@ADMIN"){
     throw new Error("User not found");
   }
   if(req.body.password !== "ROOT"){
